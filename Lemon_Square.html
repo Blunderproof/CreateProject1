@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Grids</title>
+  <style>
+    .wrapper{
+      display:grid;
+      grid-template-columns: 15% 85%;
+      /*
+      grid-column-gap:1em;
+      grid-row-gap:1em;
+      */
+    }
+
+    .wrapper > div{
+      background:#eee;
+    }
+    .wrapper > div:nth-child(odd){
+      background:#add;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div>
+      <a href="index.html" class="bar-item button"><h3>Menu</h3></a>
+      <a href="Lemon_Squares.html" class="bar-item button">Lemon Squares</a>
+      <a href="Spinach_Ravioli.html" class="bar-item button">Spinach Ravioli</a>
+      <a href="#" class="bar-item button">Recipe #3</a>
+      <h3 style="position: absolute; bottom: 0;">Eric Fortney and Dallin Murphy</h3>
+    </div>
+    <div>
+      <img id="toggleRecipePhotos" src="images/SpinachRavioli.jpg" class="toggleRecipePhoto"/>
+
+    </div>
+  </div>
+</body>
+</html>
