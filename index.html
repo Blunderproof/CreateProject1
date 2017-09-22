@@ -1,45 +1,55 @@
 <!DOCTYPE html>
 <html>
-<title>Yummy Bytes</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="main.css">
-<script src="scripts/toggleRecipePhotos.js"></script>
-<body>
 
-    <!-- Sidebar -->
-    <div class="sidebar light-grey bar-block" style="width:25%">
-        <a href="index.html" class="bar-item button"><h3>Menu</h3></a>
-        <a href="Lemon_Squares.html" class="bar-item button">Lemon Squares</a>
-        <a href="Spinach_Ravioli.html" class="bar-item button">Spinach Ravioli</a>
-        <a href="#" class="bar-item button">Recipe #3</a>
-        <h3 class="bar-item" style="position: absolute; bottom: 0;">Eric Fortney and Dallin Murphy</h3>
+<head>
+  <title>Tasty Bytes Recipes</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="scripts/toggleRecipePhotos.js" type="text/javascript"></script>
+<head>
+<body onload = "startTimer()">
+  <div class="wrapper">
+    <!--Header-->
+    <div class="box header">Tasty Bytes - By Eric Fortney and Dallin Murphy</div>
+    <!--Sidebar-->
+    <div class="box sidebar">
+      <nav class="nav-menu">
+        <ul>
+          <li class="link"><a href="index.html"><h3>Menu</h3></a></li>
+          <li class="link"><a href="Lemon_Squares.html">Lemon Squares</a></li>
+          <li class="link"><a href="Spaghetti.html">Spaghetti</a></li>
+          <li class="link"><a href="Chicken_Noodle.html">Chicken Noodle</a></li>
+          <li class="link"><a href="Choco_Chip.html">Chocolate Chip C's</a></li>
+        </ul>
+        <p class="box" style="font-size: 20px;">Please leave us any recommendations you might have!</p>
+        <input id="demo">
+        <script type="text/javascript" src="scripts/Recommendations.js"></script>
+        <button type="button" onclick="recommendation_message()">Submit</button>
+      </nav>
     </div>
-
-    <!-- Page Content -->
-    <div style="margin-left:25%">
-
-    <!-- Header -->
-    <div class="container teal">
-      <h1>Yummy Bytes</h1>
-    </div>
-
-    <script>
-        startTimer();
-    </script>
-    <!--Content-->
-
-      <img id="toggleRecipePhotos" src="images/LemonSquares.jpg" class="toggleRecipePhoto"/>
-      <img src="http://www.freeiconspng.com/uploads/arrow-icon-28.png" width="48"height="auto" onclick="goToSpecificImage(0)">
+    <!-- Main Content-->
+    <div class="box content">
+      <h2 class="full-width-borders">Click the sidebar for recipes</h2>
+      <div class="buttons">
+        <a href="javascript:void(0);" id="btn0" class="menu-btn" style="top:-80px;" onclick="goToSpecificImage(0)"></a>
+        <a href="javascript:void(0);" id="btn1" class="menu-btn" style="top:-80px; margin-left:50px;" onclick="goToSpecificImage(1)"></a>
+        <a href="javascript:void(0);" id="btn2" class="menu-btn" style="top:-80px; margin-left:-50px;" onclick="goToSpecificImage(2)"></a>
+        <a href="javascript:void(0);" id="btn3" class="menu-btn" style="top:-80px; margin-left:-100px;" onclick="goToSpecificImage(3)"></a>
 
 
-    <div class="container">
-      <h2>Click the sidebar for receipes</h2>
-      <p>The sidebar with is set with "style="width:25%".</p>
-      <p>The left margin of the page content is set to the same value.</p>
 
-    </div>
+      </div>
+        <img src="images/ChickenNoodle.jpg" id="mainImage" class="main-image">
+
+      <div class="info-quote">
+        Great recipe by two great dudes.
+      </div>
+
+
+        </ul>
+      </div>
+
 
     </div>
-
+  </div>
 </body>
 </html>
